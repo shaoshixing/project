@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>房间</title>
+    <style>
+        #aa{
+            width: 580px;
+            height: 300px;
+        }
+        .j{
+            width: 120px;
+            height: 120px;
+            background-color: green;
+            float: left;
+            text-align: center;
+            margin: 20px 0 0 20px;
+            color: rgb(255, 255, 255);
+            font-size: 26px;
+            line-height: 120px;
+        }
+    </style>
+</head>
+<body>
+    <h1>房间预订</h1>
+    <h3 id="date"></h3>
+    <div id="aa">
+        <div class="j"><input type="button" value="可预定">101</div>
+        <div class="j"><input type="button" value="可预定">102</div>
+        <div class="j"><input type="button" value="可预定">103</div>
+        <div class="j"><input type="button" value="可预定">104</div>
+        <div class="j"><input type="button" value="可预定">105</div>
+        <div class="j"><input type="button" value="可预定">106</div>
+        <div class="j"><input type="button" value="可预定">107</div>
+        <div class="j"><input type="button" value="可预定">108</div>
+    </div>
+    <script src="functions.js"></script>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script>
+        setInterval(function(){
+            document.getElementById("date").innerText = getDate()
+        },1000)
+
+        $("input").on("click",function(){
+            $(this).parent('.j').css('background','red')
+            $(this).val('已预约')
+        })
+    </script>
+</body>
+</html>
